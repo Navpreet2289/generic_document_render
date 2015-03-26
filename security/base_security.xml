@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data>
+        <record model="ir.module.category" id="base.module_category_generic_document_render">
+            <field name="name">Generic Document Render</field>
+            <field name="sequence">100</field>
+        </record>
+        
+        <record id="generic_document_render.group_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="base.module_category_generic_document_render"/>
+        </record>
+        
+    </data>
+</openerp>

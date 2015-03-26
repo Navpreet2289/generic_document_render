@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <!-- Document Template -->
+        <record model="ir.ui.view" id="document_template_tree_view">
+            <field name="name">document.template.tree</field>
+            <field name="model">document.template</field>
+            <field name="arch" type="xml">
+                <tree string="Document Templates">
+                    <field name="name"/>
+                    <field name="type"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="document_template_form_view">
+            <field name="name">document.template.form</field>
+            <field name="model">document.template</field>
+            <field name="arch" type="xml">
+                <form string="Document Template" version="7.0">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="type"/>
+                                <field name="title"/>
+                            </group>
+                            <group>
+                                <field name="extension"/>
+                                <field name="content_type"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <field name="content" nolabel="1" style="min-height:300px" widget="ace" theme="tomorrow" filename="name" options="{'enableBasicAutocompletion': true,'enableSnippets': true,'enableLiveAutocompletion': false}" addons="['ace/ext/language_tools']"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_document_template">
+            <field name="name">Document Template</field>
+            <field name="res_model">document.template</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Document Template -->
+    </data>
+</openerp>

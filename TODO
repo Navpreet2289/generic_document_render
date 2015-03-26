@@ -1,0 +1,3 @@
+* Add relation with all the templates used in a template
+* Add an attribute to templates that indicates if all related templates exists
+* Add known and more common content types

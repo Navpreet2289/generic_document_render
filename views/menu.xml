@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <menuitem name="Document Templates" id="menu_root" sequence="20" groups="generic_document_render.group_manager"/>
+        <menuitem name="Documents" parent="menu_root" id="document" sequence="1" />
+        <menuitem name="Configuration" parent="menu_root" id="document_config" sequence="2" />
+
+
+
+        <menuitem name="Document Templates" id="menu_document_template" parent="document"
+                  action="act_document_template"/>
+
+        <menuitem name="Document Template Functions" id="menu_document_template_function" parent="document_config"
+                  action="act_document_template_function"/>
+
+    </data>
+</openerp>

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <!-- Document Template Function -->
+        <record model="ir.ui.view" id="document_template_function_tree_view">
+            <field name="name">document.template.function.tree</field>
+            <field name="model">document.template.function</field>
+            <field name="arch" type="xml">
+                <tree string="Document Template Functions">
+                    <field name="name"/>
+                    <field name="type"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="document_template_function_form_view">
+            <field name="name">document.template.function.form</field>
+            <field name="model">document.template.function</field>
+            <field name="arch" type="xml">
+                <form string="Document Template Function" version="7.0">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="type"/>
+                            </group>
+                            <group>
+                                <field name="code" widget="ace" mode="python" theme="tomorrow"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_document_template_function">
+            <field name="name">Document Template Functions</field>
+            <field name="res_model">document.template.function</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+
+        <!-- Document Template Function -->
+    </data>
+</openerp>
